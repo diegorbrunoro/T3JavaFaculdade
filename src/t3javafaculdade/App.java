@@ -34,7 +34,7 @@ public class App {
         value = Integer.parseInt(valor);
             if(value == 99){
                 LD.mostraLista();
-                LDPar.mostraLista();
+                
  
                  
             }
@@ -43,12 +43,14 @@ public class App {
             }else{
                 LD.insereFim(value);
             }
-            nodoAtual = LD.prim;
+            
                
        //-------------------------- Até aqui funciona
  
                    
         }//Fim 1º While
+        
+        nodoAtual = LD.prim;
         
             while(nodoAtual != null)
         {
@@ -57,6 +59,7 @@ public class App {
                     }
             nodoAtual = nodoAtual.next;
         }//Fim 2º While
+            LDPar.mostraLista();
                     
         }
         
