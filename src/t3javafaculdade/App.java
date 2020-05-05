@@ -27,35 +27,29 @@ public class App {
         
         
         Nodo nodoAtual = LD.prim;
+
         
         while(value != 99)
         {
         valor = JOptionPane.showInputDialog("Digite o numero: \n" + "Ou \nDigite X para Sair");
         value = Integer.parseInt(valor);
-            if(value == 99){
-                LD.mostraLista();
-                
- 
-                 
+            if(value != 99){
+                LD.mostraLista();   
             }
             if(value >=0){
                 LD.insereInicio(value); 
             }else{
                 LD.insereFim(value);
             }
-            
-               
-       //-------------------------- Até aqui funciona
- 
-                   
+        
         }//Fim 1º While
         
-        nodoAtual = LD.prim;
+        nodoAtual = LDPar.prim;
         
             while(nodoAtual != null)
         {
             if(nodoAtual.dado %2 == 0){
-                        LDPar.insereInicio(value);
+                        LDPar.insereInicio(par);
                     }
             nodoAtual = nodoAtual.next;
         }//Fim 2º While
