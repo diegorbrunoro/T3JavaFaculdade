@@ -5,7 +5,7 @@
  */
 package t3javafaculdade;
 
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 /**
  *
@@ -19,41 +19,27 @@ public class App {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        String valor;
-        int value =0, par=0;
-        
-        ListaDupla LD = new ListaDupla();
-        ListaDupla LDPar = new ListaDupla();
-        
-        
-        Nodo nodoAtual = LD.prim;
 
+        int par=0;
+        Scanner ler = new Scanner(System.in);
+        ListaDupla LD = new ListaDupla();
+         
+        System.out.println("Para Sair digite X \n");
+        int entra = ler.nextInt();
+        if (entra ==1){
+        while(entra != 'x'){
+            System.out.println("PDigite o Valor: \n");
+            int valor = ler.nextInt();
+            LD.insereInicio(valor); 
+            
+        }
         
-        while(value != 99)
-        {
-        valor = JOptionPane.showInputDialog("Digite o numero: \n" + "Ou \nDigite X para Sair");
-        value = Integer.parseInt(valor);
-            if(value != 99){
-                LD.mostraLista();   
-            }
-            if(value >=0){
-                LD.insereInicio(value); 
-            }else{
-                LD.insereFim(value);
-            }
+LD.mostraLista(); 
         
-        }//Fim 1º While
-        
-        nodoAtual = LDPar.prim;
-        
-            while(nodoAtual != null)
-        {
-            if(nodoAtual.dado %2 == 0){
-                        LDPar.insereInicio(par);
-                    }
-            nodoAtual = nodoAtual.next;
-        }//Fim 2º While
-            LDPar.mostraLista();
+           
+            
+                
+   
                     
         }
         
