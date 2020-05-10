@@ -1,7 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* FACULDADE DOM BOSCO DE PORTO ALEGRE
+ *  Sistemas de Informação - Estrtura de Dados - Terceiro T1
+ * 
+ * Objetivo do Programa: 
+ * Escrever um programa que lê números inteiros, quando for positivo inserir no início de uma 
+ * lista duplamente encadeada LD. Quando o número lido for negativo inserir no fim da lista.   
+ * Determine um flag de saída para o loop de leitura dos números.  
+ * Ao final da leitura da LD, criar uma lista dupla – LDPar – que deverá conter apenas os números pares da LD.  
+ * Após a criação da LDPar exibir o conteúdo das duas listas. 
+ * Componentes do grupo: Diego Rodrigues Brunoro
+ * Data da entrega do arquivo fonte: 09/05/2020
  */
 package t3javafaculdade;
 
@@ -11,7 +18,7 @@ import java.util.Scanner;
  *
  * @author DIEGO
  */
-public class App2 {
+public class APP {
 
     /**
      * @param args the command line arguments
@@ -48,8 +55,12 @@ public class App2 {
                  nodoAtual=nodoAtual.next;
          }
        
-
+        
+        System.out.print("\n Lista Apenas Pares: \n");
         LDPar.mostraLista();
+        
+        System.out.print("\n Lista total: \n");
+        LD.mostraLista();
         
 
     
